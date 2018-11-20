@@ -1,0 +1,68 @@
+/*
+ * style.css 
+ */
+body {
+	font-family: "OCR A Std", monospace, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+
+.container, .container-fluid {
+	padding-right: 15px;
+	padding-left: 15px;
+	background-color: #fff;
+}
+
+.row {
+	margin-bottom: 5px;
+}
+
+.header {
+	height: 150px;	
+	background-color: #fff;
+	border: 0px;
+}
+
+.footer {
+	background-color: #fff;
+
+}
+
+.table {
+	background-color: transparent;
+}
+
+.table-bordered {
+	border: 1px solid #fff;
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th,
+	.table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th,
+	.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+	border: 1px solid #fff
+}
+
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+	border-bottom-width: 2px
+}
+
+[class*="col-"], caption, header, footer, nav, aside, section, div[role="main"] {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #fff;
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #ddd;
+	border: 1px solid rgba(0,0,0,0);
+	text-align: center;
+}
+
+div[role="main"] {
+	background-color: #fff;
+	border: #fff;
+}
+
+div[role="main"], nav, aside {
+	height: 600px;
+}

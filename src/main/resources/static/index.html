@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>movie2you</title>
+
+    <link rel="icon" type="img/camera.png" href="img/camera.png" />	
+
+	<link href="css/style.css" rel=stylesheet>
+    <link href="css/bootstrap.min.css" rel=stylesheet>
+	<script src="js/jquery.js"></script>
+	<script src="js/utils.js"></script>
+
+	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+  	<div class="container">
+		<header class="header"> 
+			<h1>movie2you</h1>
+		</header>
+		<br></br>
+
+		<div role="main">
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<p> Na dúvida de qual filme escolher, mas... O gênero você sabe né?</p>
+					<p> Então escolha o seu gênero preferido e deixa que a gente se encarrega de escolher os melhores filmes! </p>	
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+	                <label>Qual gênero de filme deseja assistir?</label>
+	                <select id="genero" class="input-large form-control">
+	                    <option value="" selected="selected"></option>
+	                    <option value="acao">Acao</option>
+	                    <option value="animacao">Animacao</option>
+	                    <option value="aventura">Aventura</option>
+						<option value="comedia">Comedia</option>
+	                    <option value="cult">Cult</option>
+	                    <option value="documentario">Documentario</option>
+	                    <option value="drama">Drama</option>
+						<option value="fantasia">Fantasia</option>
+	                    <option value="ficcao">Ficcao</option>
+	                    <option value="romance">Romance</option>
+	                    <option value="suspense">Suspense</option>
+						<option value="comedia">Comedia</option>
+	                    <option value="trash">Trash</option>
+	                </select>
+
+			        <button id="busca" class="btn btn-primary col-md-12">Buscar</button>
+
+	            </div>
+
+		        <div class="col-md-4"></div>
+			</div>
+
+	        <div class="row">
+	        	<div class="col-md-4"></div>
+	            <div class="col-md-4"></div>
+				<div class="col-md-4"></div>
+            </div>
+
+            <div class="row">
+            	<div class="col-md-12"></div>
+            </div>
+
+             <div class="row">
+            	<div id="dadosFilme1" class="col-md-4">
+            		
+            	</div>
+
+            	<div id="dadosFilme2" class="col-md-4">
+            		
+            	</div>
+
+            	<div id="dadosFilme3" class="col-md-4">
+            		
+            	</div>
+            </div>
+
+			<div class="row">
+				<table class="table table-bordered"> 
+					<thead>
+						<caption> Filmes encontrados: </caption>
+						<tr> 
+							<th>Nome</th>
+							<th>Gênero</th> 
+							<th>Diretor</th>
+							<th>Ano</th> 
+ 
+						</tr> 
+					</thead> 
+					
+					<tbody id="dadosFilme"> 
+						
+					</tbody> 
+				</table>
+			</div>
+
+			<br></br>
+			<footer class="header">copyright©</footer>
+		</div>
+
+		
+  </body>
+  
+</html>
