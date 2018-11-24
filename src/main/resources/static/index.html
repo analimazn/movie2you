@@ -34,19 +34,23 @@
 
   	<div class="container" id="content">
 		<header class="header mb-15"> 
-			<img src="img/logo.png" height=200><!-- me desculpa quem fez esse logo, mas ficou meio obsoleto agora, o video do cinema é mais foda askkdaskf -->
+			<!--<img src="img/logo.png" height=200>me desculpa quem fez esse logo, mas ficou meio obsoleto agora, o video do cinema é mais foda askkdaskf -->
 		</header>
 	
 	<div class="text-center">
-		<h1 class="display">Tá sem ideia do que assistir?</h1>
-		<p class="lead">Para de ficar rolando a tela do Netflix e deixa a gente decidir por você :)</p>
+		<h1 class="display">tá sem ideia do que assistir?</h1>
+		<br>
+			
+		</br>
+		<p class="lead">para de ficar rolando a tela do Netflix e deixa a gente decidir por você</p>
+		<br>
+			
+		</br>
 	</div>
-
-
 			<div class="row search-box text-center">
 				<div class="col-md-4">
-	                <select id="genero" class="mb-15 input-large form-control select-films">
-	                    <option value="unselected" selected disabled hidden>É só escolher um desses gêneros:</option>
+	                <select id="genre" class="mb-15 input-large form-control select-films">
+	                    <option value="unselected" selected disabled hidden>Escolha um gênero</option>
 	                    <option value="acao">Acao</option>
 	                    <option value="animacao">Animacao</option>
 	                    <option value="aventura">Aventura</option>
@@ -62,13 +66,13 @@
 	                    <option value="trash">Trash</option>
 	                </select>
 
-			        <button id="busca" class="btn btn-primary search-button col-md-12">Uni, duni, tê</button>
+			        <button id="busca" class="btn btn-primary search-button col-md-12">Buscar</button>
 
 	            </div>
 
 			</div>
             
-            <!-- FIXME: acho que nao tem porque repetir a informação do genero do filme aqui, tipo,
+            <!-- FIXME: acho que nao tem porque repetir a informação do genre do filme aqui, tipo,
             			a pessoa já sabe que escolheu um filme de ação, mostrar isso de novo pra ela
             			é desnecessário.. mas assim, só uma ideia, n sei de nada lsdkfjasdlf -->
             			
@@ -77,18 +81,18 @@
 						Eu so nao coloquei pq tem que ser implementado na lógica do sistema. 
 						Mas assim, sei de nada o trabalho é de vcs sdfjalsdjf -->
            			  
-             <div class="row text-center mt-15 movies-selector">
+             <div id="movies" class="row text-center mt-15 movies-selector">
             	<div id="dadosFilme1" class="random-movie">
             		<!-- FIXME: impossivel alinhar verticalmente o texto dos filmes pq cada linha vem dentro de uma tag <p> -->
-         			<p>Qual filme será que vai aparecer aqui?</p>
+         			
             	</div>
 
             	<div id="dadosFilme2" class="random-movie">
-            		<p>Qual filme será que vai aparecer aqui?</p>
+            	
             	</div>
 
             	<div id="dadosFilme3" class="random-movie">
-            		<p>Qual filme será que vai aparecer aqui?</p>
+            		
             	</div>
             </div>
 		
