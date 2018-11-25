@@ -14,7 +14,7 @@ public class ModelUser {
 	ObjectContainer dbUser = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/user.db4o");
 	
 	public boolean addUser(User user){
-		if(isUserAvailable(user.getUsername())){
+		if(isUserAvailable(user.getEmail())){
 			dbUser.store(user);
 			dbUser.commit();
 			return true;
@@ -22,15 +22,26 @@ public class ModelUser {
 		return false;
 	}
 	
-	public boolean isUserAvailable(String username){
+	public boolean isUserAvailable(String email){
 		Query query = dbUser.query();
 		query.constrain(User.class);
 	    ObjectSet<User> allUSers = query.execute();
 	    for(User user: allUSers){
-	    	if(user.getUsername().equals(username)) 
+	    	if(user.getEmail().equals(email)) 
 	    		return false;
 	    }
 	    return true;
+	}
+	
+	public boolean validateLogin(String email, String password){
+		Query query = dbUser.query();
+		query.constrain(User.class);
+	    ObjectSet<User> allUSers = query.execute();
+	    for(User user: allUSers){
+	    	if(user.getEmail().equals(email) && user.getPassword().equals(password)) 
+	    		return true;
+	    }
+	    return false;
 	}
 	
 	public List<User> getUsers(){	
@@ -39,6 +50,5 @@ public class ModelUser {
 		List<User> listUsers = query.execute();
 		return listUsers;
 	}
-	
 }
 

@@ -25,14 +25,16 @@
         <section id="browser-view">
             <div class="col-md-4">
                 <main id="main-content">
-                    <form "id="register-form" name="register-form" class="register-form">
-                            <input type="text" placeholder="Username" name="username" id="username" required>
+                    <form action = "#" "id="register-form" name="register-form" class="register-form">
+                            <input type="text" id="username" placeholder="Username" required>
                             <br>
-                            <input type="text" placeholder="Email" name="email" id="email" required>
+                            <input type="text" id="email" placeholder="Email" required>
                             <br>
-                            <input type="password" placeholder="Senha" name="psw" id="password" required>
+                            <input type="password" id="password" placeholder="Senha" required>
                             <br>
-                            <input class="btn-submit" id="btnSubmit" type="submit" value="Cadastrar">
+                            <input type="submit" class="btn-submit" id="userSubmit" value="Cadastrar">
+                            <span id="result"></span>
+                            <br>
                            <p>Já tem uma conta? <a href="login.html"> Acesse aqui</a></p>
                         </div>
                     </form>
@@ -42,7 +44,7 @@
     </div>
     <script>
         $(document).ready(function(){
-          $('#btnSubmit').click(function(){
+          $('#userSubmit').click(function(){
             var username = $('#username').val();
             var email = $('#email').val();
             var password = $('#password').val();
@@ -52,19 +54,16 @@
                 "email": email, 
                 "password": password
             };
-            console.log(data);
 
-            $.post("/movie/insertElement", data);
-
-            /*$.ajax({
+            $.ajax({
                 method: 'POST',
                 data: data,
                 contentType: 'application/json; charset=utf-8',
-                url: '/movie/cadaster',
+                url: '/movie/insertElement',
                 success: function(data) {
                     $('#result').text(data);
                 }
-            });*/
+            });
           });
         });
             

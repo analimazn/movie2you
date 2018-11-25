@@ -26,10 +26,12 @@
                     <div class="authentication-form">
                         <div id="error-message" style="display: none" class="alert alert-danger" role="alert">Dados inválidos!</div>
 
-                        <form action="movies.html "id="login-form" name="login-form" class="login-form">
-                            <input name="username" id="username" type="text" placeholder="Email" required>
-                            <input name="password" id="password" type="password" placeholder="Senha" required>
-                            <input class="btn-submit" type="submit" value="Entrar">
+                        <form action = "#" id="login-form" class="login-form">
+                            <input type="text"  id="email" placeholder="Email" required>
+                            <input type="password" id="password" placeholder="Senha" required>
+                            <input type="submit" class="btn-submit" id="loginSubmit" value="Entrar">
+                            <br>
+                            <span id="result"></span>
                             <p>Não tem uma conta? <a href="cadaster.html"> Cadastre-se</a>
                         </form>
                     </div>
@@ -39,29 +41,32 @@
     </div>
 
     <script>
-        $('.message a').click(function () {
-            $('form').animate({
-                height: "toggle",
-                opacity: "toggle"
-            }, "slow");
-        });
-        $("#login-form").submit(login);
-        function login(event) {
-            event.preventDefault();
+        $(document).ready(function(){
+          $('#loginSubmit').click(function(){
+            var email = $('#email').val();
+            var password = $('#password').val();
+
+            var data = {
+                "email": email, 
+                "password": password
+            };
             $.ajax({
-                type: 'POST',
-                url: '/login',
-                data: $('#login-form').serialize(),
-                success: function (data) {
-                    $(location).attr('href','/');
-                },
-                error: function (req, status, error) {
-                    $('#username').val('');
-                    $('#password').val('');
-                    $('#error-message').css('display', 'block');
+                method: 'POST',
+                data: data,
+                contentType: 'application/json; charset=utf-8',
+                url: '/movie/insertLogin',
+                success: function(data) {
+                    console.log(typeof data)
+                    if (data == 'true') {
+                        $('#result').remove();
+                        window.location='movies.html'
+                    } else {
+                        $('#result').text(data);
+                    }
                 }
             });
-        }
+          });
+        });
     </script>
 </body>
 

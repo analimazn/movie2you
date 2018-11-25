@@ -33,6 +33,7 @@ public class MainServer {
 		controllerMovie.getMovie();
 		controllerMovie.getMovieName();
 		controllerUser.postUser();
+		controllerUser.postLogin();
 		
 		
     }
