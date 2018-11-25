@@ -2,42 +2,41 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login - uLearn</title>
-    <script src="resources/js/jquery-3.3.1.min.js"></script>
-    <script src="resources/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app/uLearn.css">
-    <link rel="stylesheet" href="app/login.css">
+    
+    <title> Login - movie2you </title>
+    
+    <link rel="icon" type="img/camera.png" href="img/camera.png" />
+    <link href="css/style-login.css" rel=stylesheet>
+    <link href="css/bootstrap.min.css" rel=stylesheet>
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
-    <section id="browser-view">
-        <main id="main-content">
-            <div class="authentication-form">
+    <div>
+        <a href="index.html" class="row box-index col-md-12"> Home</a>
+    </div>
 
-                <div id="error-message" style="display: none" class="alert alert-danger" role="alert">Dados inválidos!</div>
+    <div class="container" id="content">
+        <section id="browser-view">
+            <div class="col-md-4">
+                <main id="main-content">
+                    <div class="authentication-form">
+                        <div id="error-message" style="display: none" class="alert alert-danger" role="alert">Dados inválidos!</div>
 
-                <form name="register-form" class="register-form">
-                    <input type="text" placeholder="Nome"  required />
-                    <input type="email" placeholder="Email" required />
-                    <input type="password" placeholder="Senha" required />
-                    <input class="btn-submit" type="submit" value="Criar conta">
-                    <p class="message">Já tem uma conta? <a href="#">Entrar</a></p>
-                </form>
-
-                <form id="login-form" name="login-form" class="login-form" method="POST">
-                    <input name="username" id="username" type="text" placeholder="Usuário" required>
-                    <input name="password" id="password" type="password" placeholder="Senha" required>
-                    <input class="btn-submit" type="submit" value="Entrar">
-                    <p class="message">Ainda não assinou? <a href="#">Crie uma conta</a></p>
-                </form>
-
+                        <form action="movies.html "id="login-form" name="login-form" class="login-form">
+                            <input name="username" id="username" type="text" placeholder="Email" required>
+                            <input name="password" id="password" type="password" placeholder="Senha" required>
+                            <input class="btn-submit" type="submit" value="Entrar">
+                            <p>Não tem uma conta? <a href="cadaster.html"> Cadastre-se</a>
+                        </form>
+                    </div>
+                </main>
             </div>
-        </main>
-    </section>
+        </section>
+    </div>
 
     <script>
         $('.message a').click(function () {

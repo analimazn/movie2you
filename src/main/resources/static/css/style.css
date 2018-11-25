@@ -77,30 +77,6 @@ body {
 	justify-content: space-between;
 }
 
-/*.random-movie{
-	height: 150px;
-	width: 120px;
-	color: transparent !important;
-	background-image: url(../img/popcorn.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
-    border-radius: .5rem;
-    -webkit-transition: background-image .15s ease-in-out;
-    transition: background-image .15s ease-in-out !important;
-}*/
-
-
-/*.random-movie:hover{
-	color: #000 !important;
-	background-image: none;
-	background-color: rgba(255, 255, 255, 0.5);
-	-webkit-transition: background-image .15s ease-in-out;
-	transition: background-image .15s ease-in-out !important;
-}*/
-
-
 .relatedfilms{
 	padding-left: 15px !important;
     padding-right: 15px !important;
@@ -117,79 +93,7 @@ body {
 	text-align-last: center; /* para chrome */
 }
 
-.footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
-
-
-/* o bootstrap 4+ ja tem tudo isso de baixo de fabrica, mds pq usar um negocio que ngm usa mais?? */
-.display{
-    font-size: 60px;
-    font-weight: 300;
-    margin-bottom: 0 !important;
-}
-
-.lead {
-    font-size: 20px !important;
-    margin-top: 0 !important;
-}
-
-.btn{
-	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
-}
-
-.btn-primary {
-    color: #fff !important;
-    background-color: #007bff !important;
-    border-color: #007bff !important;
-}
-
-.btn-primary.focus, .btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5) !important;
-}
-
-.btn-primary:hover {
-    color: #fff !important;
-    background-color: #0069d9 !important;
-    border-color: #0062cc !important;
-}
-
-.card {
-	border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-}
-
-.card:hover {
-	border: 1px white solid;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-
-.table {
-	background-color: transparent;
-}
-
-.table-bordered {
-	border: 1px solid transparent;
-}
-
-.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th,
-	.table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th,
-	.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-	border: 1px solid #fff
-}
-
-.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-	border-bottom-width: 2px
-}
-
-
 div[role="main"] {
 	background-color: rgba(0, 0, 0, 0.79);
 	border: transparent;
 }
-

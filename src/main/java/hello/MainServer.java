@@ -8,6 +8,7 @@ import hello.classes.*;
 public class MainServer {
 	
 	final static ModelMovie modelMovie = new ModelMovie();
+	final static ModelUser modelUser = new ModelUser();
 	
     public static void main(String[] args) {
     	
@@ -27,9 +28,13 @@ public class MainServer {
 		inicializarFilmes();
 
 		ControllerMovie controllerMovie = new ControllerMovie(modelMovie);
+		ControllerUser controllerUser = new ControllerUser(modelUser);
 		
 		controllerMovie.getMovie();
 		controllerMovie.getMovieName();
+		controllerUser.postUser();
+		
+		
     }
     
     public static void inicializarFilmes(){
