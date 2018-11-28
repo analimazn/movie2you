@@ -17,7 +17,7 @@ body {
 
 .darken-bg{
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.79);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .header{
@@ -62,4 +62,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.botao{
+	color:white;
+	border:none;
+	background-image: linear-gradient(to right, #ee0d0d, #f3122c, #f61e43, #f62d58, #f43b6b);
+	border-radius: 1em;
+	margin-top:3em;
+	padding:1em;
 }

@@ -18,6 +18,8 @@ body {
 }
 
 .authentication-form {
+	margin:auto;
+	margin-top:6em;
   max-width: 360px;
   padding: 45px;
   text-align: center;
@@ -77,7 +79,18 @@ body {
     background-color: white;
 }
 
-div[role="main"] {
-  background-color: rgba(0, 0, 0, 0.79);
-  border: transparent;
+.botao{
+	color:white;
+	border:none;
+	background-image: linear-gradient(to right, #ee0d0d, #f3122c, #f61e43, #f62d58, #f43b6b);
+	border-radius:2em;
+	margin-top:1em;
+	padding:1em;
+}
+
+.fundo{
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-image:url('img/cinema.png');
 }

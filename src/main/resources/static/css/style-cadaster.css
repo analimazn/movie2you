@@ -5,6 +5,7 @@
 }
 
 body {
+	text-align: center;
   font-family: "OCR A Std", monospace, Arial, sans-serif;
   font-size: 14px !important;
   color: #fff !important;
@@ -18,6 +19,9 @@ body {
 }
 
 .register-form {
+	margin:auto;
+	margin-top:4.6em;	
+	display: inline-block;
   max-width: 360px;
   padding: 45px;
   text-align: center;
@@ -75,6 +79,15 @@ body {
     height: 100vh ;
     width: 100% !important;
     background-color: white;
+}
+
+.botao{
+	color:white;
+	border:none;
+	background-image: linear-gradient(to right, #ee0d0d, #f3122c, #f61e43, #f62d58, #f43b6b);
+	border-radius:2em;
+	margin-top:1em;
+	padding:1em;
 }
 
 div[role="main"] {
