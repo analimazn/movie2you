@@ -1,5 +1,9 @@
 # movie2you
 
+## Ana Lima
+## Bruno Dionísio
+## Mayara Ferreira
+
 # UML
 ![uml](https://user-images.githubusercontent.com/25674507/49265171-34718180-f438-11e8-8bec-e4a21b320826.jpg)
 
