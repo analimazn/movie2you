@@ -93,7 +93,17 @@ body {
 	text-align-last: center; /* para chrome */
 }
 
-div[role="main"] {
-	background-color: rgba(0, 0, 0, 0.79);
-	border: transparent;
+.botao{
+    color:white;
+    border:none;
+    background-image: linear-gradient(to right, #ee0d0d, #f3122c, #f61e43, #f62d58, #f43b6b);
+    border-radius:2em;
+    margin-top:1em;
+    padding:1em;
 }
+
+div[role="main"] {
+    background-color: rgba(0, 0, 0, 0.79);
+    border: transparent;
+}
+
