@@ -1,4 +1,5 @@
 ![index](https://github.com/analimazn/movie2you/tree/alternative/src/main/resources/static/screens/index.png)
+Format: ![Alt Text](https://github.com/analimazn/movie2you/tree/alternative/src/main/resources/static/screens/index.png)
 ![login](https://github.com/analimazn/movie2you/tree/alternative/src/main/resources/static/screens/login.png)
 ![cadastrar](https://github.com/analimazn/movie2you/tree/alternative/src/main/resources/static/screens/cadastrar.png)
 ![pesquisar](https://github.com/analimazn/movie2you/tree/alternative/src/main/resources/static/screens/pesquisar.png)
