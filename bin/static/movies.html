@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Filmes - movie2you</title>
+
+    <link rel="icon" type="img/camera.png" href="img/camera.png" />	
+
+	<link href="css/style-movies.css" rel=stylesheet>
+    <link href="css/bootstrap.min.css" rel=stylesheet>
+	<script src="js/jquery.js"></script>
+
+	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="darken-bg">
+  
+  	<video autoplay loop poster="media/video.mp4" class="bg_video" muted>
+    	<source src="media/videos.mp4" type="video/mp4">
+	</video>
+	
+	<div>
+		<a href="index.html"><button class="botao"> Sair</button></a>
+    </div>
+
+  	<div class="container" id="content">
+		<header class="header mb-15"> 
+			<img src="img/logo.png" height=200>
+		</header>
+	
+		<div class="text-center">
+			<h1 class="display">Tá sem ideia do que assistir?</h1>
+			<p class="lead">Para de ficar rolando a tela do Netflix e deixa a gente decidir por você!</p>
+			<br>
+				
+			</br>
+		</div>
+		<div class="row search-box text-center">
+			<div class="col-md-4">
+	            <select id="genre" class="mb-15 input-large form-control select-films">
+	                <option value="unselected" selected disabled hidden>Escolha um gênero</option>
+	                <option value="acao">Acao</option>
+	                <option value="animacao">Animacao</option>
+	                <option value="aventura">Aventura</option>
+					<option value="comedia">Comedia</option>
+	                <option value="cult">Cult</option>
+	                <option value="documentario">Documentario</option>
+	                <option value="drama">Drama</option>
+					<option value="fantasia">Fantasia</option>
+	                <option value="ficcao">Ficcao</option>
+	                <option value="romance">Romance</option>
+	                <option value="suspense">Suspense</option>
+					<option value="comedia">Comedia</option>
+	                <option value="trash">Trash</option>
+	            </select>
+
+		        <button id="busca" class="btn btn-primary search-button col-md-12">Buscar</button>
+
+	        </div>
+
+		</div>	  
+         <div id="movies" class="row text-center mt-15 movies-selector">
+        	<div id="dadosFilme1" class="random-movie">
+        		<!-- FIXME: impossivel alinhar verticalmente o texto dos filmes pq cada linha vem dentro de uma tag <p> -->
+     			
+        	</div>
+
+        	<div id="dadosFilme2" class="random-movie">
+        	
+        	</div>
+
+        	<div id="dadosFilme3" class="random-movie">
+        		
+        	</div>
+        </div>
+	
+  	</div>
+	<script>
+		$(document).ready(function(){
+			
+			$("#busca").click(function() {
+
+				var genre = $( "#genre option:selected" ).text();
+				
+				$("#dadosFilme1").empty();
+				$("#dadosFilme2").empty();
+				$("#dadosFilme3").empty();
+					
+				var url = "/movie/"+genre+"";
+				
+				$.getJSON(url, function(data) {	
+					var itemsDivs = [];
+					
+					$.each(data, function(){
+						itemsDivs.push("<p>" + this.name + "</p><p>" + 
+							this.director + "</p><p>" + 
+							this.genre + "</p><p>"+ 
+							this.year + "</p>");
+					});
+					$("#dadosFilme1").append(itemsDivs[0]);
+					$("#dadosFilme2").append(itemsDivs[1]);
+					$("#dadosFilme3").append(itemsDivs[2]);
+						
+				});
+
+			});
+
+		});
+	</script>
+	
+	<footer class="footer text-center"><hr>Copyright© 2018 - Movies2you Entretenimento S.A.</hr><hr></hr>
+	</footer>
+  
+  </body>
+  
+</html>
