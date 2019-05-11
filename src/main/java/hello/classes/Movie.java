@@ -1,18 +1,28 @@
 package hello.classes;
 
 public class Movie {
-
+	
+	private String id;	
 	private String name;	
 	private String director;
 	private String genre;
 	private String year;
 		
 	
-	public Movie(String name, String director, String genre, String year){
+	public Movie(String id, String name, String director, String genre, String year){
+		this.id = id;
 		this.name = name;
 		this.director = director;
 		this.genre = genre;
 		this.year = year;		
+	}
+	
+	public String id() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	public String getName() {
@@ -57,6 +67,7 @@ public class Movie {
 	
 	public String getMovie() {
 		StringBuilder sb = new StringBuilder();
+		sb.append(this.id).append("\n");
 		sb.append(this.name).append("\n");
 		sb.append(this.director).append("\n");
 		sb.append(this.genre).append("\n");

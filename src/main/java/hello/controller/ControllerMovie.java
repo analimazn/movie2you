@@ -7,6 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.db4o.ObjectSet;
 import com.google.gson.Gson;
 import hello.model.ModelMovie;
 import hello.classes.Movie;
@@ -14,11 +15,17 @@ import hello.classes.Movie;
 public class ControllerMovie {
 	
 	private ModelMovie modelMovie;
-	
 	Set<Movie> moviesSorted = new LinkedHashSet<Movie>();
 
 	public ControllerMovie(ModelMovie modelMovie){
 		this.modelMovie = modelMovie;
+	}
+	
+	public void getIndex() {
+		get("/", (req, res) -> {
+			String hello = "Hello World";
+			return hello;
+		});
 	}
 	
 	public void getMovie(){
@@ -33,9 +40,9 @@ public class ControllerMovie {
 		});
 	}
 	
-	public void getMovieName(){
-		get("/movie/:name", (req, res) -> {	
-			Movie moviesFound = modelMovie.getName(req.params(":name"));	
+	public void getAllMovies() {
+		get("/movies", (req, res) -> {
+			ObjectSet<Movie> moviesFound = (ObjectSet<Movie>) modelMovie.getMovies();
 			return new Gson().toJson(moviesFound);
 		});
 	}

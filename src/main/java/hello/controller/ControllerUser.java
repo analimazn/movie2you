@@ -23,19 +23,6 @@ public class ControllerUser {
 		this.modelUser = modelUser;
 	}
 	
-	
-	/*public void getMovie(){
-		get("/movie/:genre", (req, res) -> {
-			moviesSorted.clear();
-			List<Movie> moviesFound = modelMovie.searchGenre(req.params(":genre"));		
-			Collections.shuffle(moviesFound);
-			for (int i = 0; i <= 2; i++) {
-				moviesSorted.add(moviesFound.get(i));
-			}
-			return new Gson().toJson(moviesSorted);			
-		});
-	}*/
-	
 	public void postUser() {
 		post("/movie/insertElement", (req, res) -> {
 	        List<NameValuePair> pairs = URLEncodedUtils.parse(req.body(), String.valueOf(Charset.defaultCharset()));

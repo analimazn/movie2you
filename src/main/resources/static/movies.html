@@ -94,7 +94,8 @@
 				$("#dadosFilme2").empty();
 				$("#dadosFilme3").empty();
 					
-				var url = "/movie/"+genre+"";
+				var url = "/movie/" + genre;
+				console.log(url);
 				
 				$.getJSON(url, function(data) {	
 					var itemsDivs = [];

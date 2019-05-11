@@ -1,6 +1,8 @@
 package hello;
 
 import static spark.Spark.*;
+
+import hello.classes.*;
 import hello.model.*;
 import hello.controller.*;
 import hello.classes.*;
@@ -24,110 +26,102 @@ public class MainServer {
 
         //Servir conteudo html, css e javascript
 		staticFileLocation("/static");
-
 		inicializarFilmes();
 
 		ControllerMovie controllerMovie = new ControllerMovie(modelMovie);
 		ControllerUser controllerUser = new ControllerUser(modelUser);
 		
+		controllerMovie.getIndex();
+		controllerMovie.getAllMovies();
 		controllerMovie.getMovie();
-		controllerMovie.getMovieName();
 		controllerUser.postUser();
-		controllerUser.postLogin();
-		
-		
+		controllerUser.postLogin();	
     }
     
     public static void inicializarFilmes(){
     	//Comedia
-    	modelMovie.addMovie(new Movie("Crazy, Stupid, Love", "Glenn Ficarra", "Comedia", "2011"));
-    	modelMovie.addMovie(new Movie("Easy A", "Will Gluck", "Comedia", "2010"));
-    	modelMovie.addMovie(new Movie("Mr. Right", "Paco Cabezas", "Comedia", "2015"));
-    	modelMovie.addMovie(new Movie("The Big Sick", "Michael Showalter", "Comedia", "2017"));
-    	modelMovie.addMovie(new Movie("Crazy Rich Asians", "Jon M. Chu", "Comedia", "2018"));
+    	modelMovie.addMovie(new Movie("001", "Easy A", "Will Gluck", "COMEDIA", "2010"));
+		modelMovie.addMovie(new Movie("002", "Mr. Right", "Paco Cabezas", "COMEDIA", "2015"));
+		modelMovie.addMovie(new Movie("003", "The Big Sick", "Michael Showalter", "COMEDIA", "2017"));
+		modelMovie.addMovie(new Movie("004", "Crazy Rich Asians", "Jon M. Chu", "COMEDIA", "2018"));
 
+		//Suspense
+		modelMovie.addMovie(new Movie("005", "The Da Vinci Code", "Ron Howard", "SUSPENSE", "2006"));
+		modelMovie.addMovie(new Movie("006", "Miami Vice", "Michael Mann", "SUSPENSE", "2006"));
+		modelMovie.addMovie(new Movie("007", "The Prestige", "Christopher Nolan", "SUSPENSE", "2006"));
+		modelMovie.addMovie(new Movie("008", "Push", "Paul McGuigan", "SUSPENSE", "2009"));
+		modelMovie.addMovie(new Movie("009", "Stoker", "Park Chan-wook", "SUSPENSE", "2013"));
+		modelMovie.addMovie(new Movie("010", "Neon Demon", "Nicolas Winding Refn", "SUSPENSE", "2016"));
 
-    	//Suspense
-    	modelMovie.addMovie(new Movie("The Da Vinci Code", "Ron Howard", "Suspense", "2006"));
-    	modelMovie.addMovie(new Movie("Miami Vice", "Michael Mann", "Suspense", "2006"));
-    	modelMovie.addMovie(new Movie("The Prestige", "Christopher Nolan", "Suspense", "2006"));
-    	modelMovie.addMovie(new Movie("Push", "Paul McGuigan", "Suspense", "2009"));
-    	modelMovie.addMovie(new Movie("Stoker", "Park Chan-wook", "Suspense", "2013"));
-    	modelMovie.addMovie(new Movie("Neon Demon", "Nicolas Winding Refn", "Suspense", "2016"));
+		//Ficcao
+		modelMovie.addMovie(new Movie("011", "District 9", "Neill Blomkamp", "FICCAO", "2009"));
+		modelMovie.addMovie(new Movie("012", "Arrival", "Denis Villeneuve", "FICCAO", "2016"));
+		modelMovie.addMovie(new Movie("013", "Avatar", "James Cameron", "FICCAO", "2009"));
+		modelMovie.addMovie(new Movie("014", "Inception", "Christopher Nolan", "FICCAO", "2010"));
+		modelMovie.addMovie(new Movie("015", "Edge of Tomorrow", "Doug Liman", "FICCAO", "2014"));
+		modelMovie.addMovie(new Movie("016", "Blade Runner 2049", "Denis Villeneuve", "FICCAO", "2017"));
 
+		//Acao
+		modelMovie.addMovie(new Movie("017", "Avengers", "Joss Whedon", "ACAO", "2012"));
+		modelMovie.addMovie(new Movie("018", "Mad Max: Fury Road", "George Miller", "ACAO", "2015"));
+		modelMovie.addMovie(new Movie("019", "John Wick", "David Leitch", "ACAO", "2014"));
+		modelMovie.addMovie(new Movie("020", "300", "Zack Snyder", "ACAO", "2006"));
+		modelMovie.addMovie(new Movie("021", "Kick Ass", "Matthew Vaughn", "ACAO", "2010"));
 
-    	//Ficcao
-    	modelMovie.addMovie(new Movie("District 9", "Neill Blomkamp", "Ficcao", "2009"));
-    	modelMovie.addMovie(new Movie("Arrival", "Denis Villeneuve", "Ficcao", "2016"));
-    	modelMovie.addMovie(new Movie("Avatar", "James Cameron", "Ficcao", "2009"));
-    	modelMovie.addMovie(new Movie("Inception", "Christopher Nolan", "Ficcao", "2010"));
-    	modelMovie.addMovie(new Movie("Edge of Tomorrow", "Doug Liman", "Ficcao", "2014"));
-    	modelMovie.addMovie(new Movie("Blade Runner 2049", "Denis Villeneuve", "Ficcao", "2017"));
+		//Animacao
+		modelMovie.addMovie(new Movie("022", "Moana", "Ron Clements", "ANIMACAO", "2016"));
+		modelMovie.addMovie(new Movie("023", "Inside Out", "Pete Docter", "ANIMACAO", "2015"));
+		modelMovie.addMovie(new Movie("024", "Big Hero 6", "Don Hall", "ANIMACAO", "2014"));
+		modelMovie.addMovie(new Movie("024", "Coraline", "Henry Selick", "ANIMACAO", "2009"));
+		modelMovie.addMovie(new Movie("026", "Shrek", "Cicky Jenson", "ANIMACAO", "2001"));
 
-    	//Acao
+		//Aventura
+		modelMovie.addMovie(new Movie("027", "Hunger Games", "Gary Ross", "AVENTURA", "2012"));
+		modelMovie.addMovie(new Movie("028", "The Hobbit", "Peter Jackson", "AVENTURA", "2012"));
+		modelMovie.addMovie(new Movie("029", "King Kong", "Peter Jackson", "AVENTURA", "2005"));
+		modelMovie.addMovie(new Movie("030", "Sherlock Holmes", "Guy Ritchie", "AVENTURA", "2010"));
+		modelMovie.addMovie(new Movie("031", "Star Trek", "J.J. Abrams", "AVENTURA", "2009"));
 
-    	modelMovie.addMovie(new Movie("Avengers", "Joss Whedon", "Acao", "2012"));
-    	modelMovie.addMovie(new Movie("Mad Max: Fury Road", "George Miller", "Acao", "2015"));
-    	modelMovie.addMovie(new Movie("John Wick", "David Leitch", "Acao", "2014"));
-    	modelMovie.addMovie(new Movie("300", "Zack Snyder", "Acao", "2006"));
-    	modelMovie.addMovie(new Movie("Kick Ass", "Matthew Vaughn", "Acao", "2010"));
+		//Cult
+		modelMovie.addMovie(new Movie("031", "Pulp Fiction", "Quentin Tarantino", "CULT", "1994"));
+		modelMovie.addMovie(new Movie("032", "Fight Club", "David Fincher", "CULT", "1999"));
+		modelMovie.addMovie(new Movie("033", "Clockwork Orange", "Stanley Kubrick", "CULT", "1972"));
+		modelMovie.addMovie(new Movie("034", "Scarface", "Brian De Palma", "CULT", "1983"));
+		modelMovie.addMovie(new Movie("035", "Showgirls", "Paul Verhoven", "CULT", "1995"));
 
-    	//Animacao
-    	modelMovie.addMovie(new Movie("Moana", "Ron Clements", "Animacao", "2016"));
-    	modelMovie.addMovie(new Movie("Inside Out", "Pete Docter", "Animacao", "2015"));
-    	modelMovie.addMovie(new Movie("Big Hero 6", "Don Hall", "Animacao", "2014"));
-    	modelMovie.addMovie(new Movie("Coraline", "Henry Selick", "Animacao", "2009"));
-    	modelMovie.addMovie(new Movie("Shrek", "Cicky Jenson", "Animacao", "2001"));
+		//Documentario
+		modelMovie.addMovie(new Movie("036", "Hot Girls Wanted", "Ronna Gradus", "DOCUMENTARIO", "2015"));
+		modelMovie.addMovie(new Movie("037", "Blackfish", "Gabriela Cowperthwaite", "DOCUMENTARIO", "2013"));
+		modelMovie.addMovie(new Movie("038", "Icaro", "Bryan Fogel", "DOCUMENTARIO", "2017"));
+		modelMovie.addMovie(new Movie("039", "Man on Wire", "James Marsh", "DOCUMENTARIO", "2008"));
+		modelMovie.addMovie(new Movie("040", "Jiro Dreams of Sushi", "David Gelb", "DOCUMENTARIO", "2011"));
 
-    	//Aventura
-    	modelMovie.addMovie(new Movie("Hunger Games", "Gary Ross", "Aventura", "2012"));
-    	modelMovie.addMovie(new Movie("The Hobbit", "Peter Jackson", "Aventura", "2012"));
-    	modelMovie.addMovie(new Movie("King Kong", "Peter Jackson", "Aventura", "2005"));
-    	modelMovie.addMovie(new Movie("Sherlock Holmes", "Guy Ritchie", "Aventura", "2010"));
-    	modelMovie.addMovie(new Movie("Star Trek", "J.J. Abrams", "Aventura", "2009"));
+		//Thrash                                            
+		modelMovie.addMovie(new Movie("041", "Machete", "Robert Rodriguez", "TRASH", "2010"));
+		modelMovie.addMovie(new Movie("042", "Plan 9 of Sidereal Space", "Ed Wood", "TRASH", "1959"));
+		modelMovie.addMovie(new Movie("043", "Drag me to Hell", "Sam Raimi", "TRASH", "2009"));
+		modelMovie.addMovie(new Movie("044", "Evil Dead 2", "Sam Raimi", "TRASH", "1987"));
+		modelMovie.addMovie(new Movie("045", "Sharknado", "David Michael Latt", "TRASH", "2013"));
 
-    	//Cult
-    	modelMovie.addMovie(new Movie("Pulp Fiction", "Quentin Tarantino", "Cult", "1994"));
-    	modelMovie.addMovie(new Movie("Fight Club", "David Fincher", "Cult", "1999"));
-    	modelMovie.addMovie(new Movie("Clockwork Orange", "Stanley Kubrick", "Cult", "1972"));
-    	modelMovie.addMovie(new Movie("Scarface", "Brian De Palma", "Cult", "1983"));
-    	modelMovie.addMovie(new Movie("Showgirls", "Paul Verhoven", "Cult", "1995"));
+		//Romance
+		modelMovie.addMovie(new Movie("046", "It Happened One Night", "James Wan", "ROMANCE", "1934"));
+		modelMovie.addMovie(new Movie("047", "Casablanca", "Frank Capra", "ROMANCE", "1942"));
+		modelMovie.addMovie(new Movie("048", "Carol", "Todd Haynes", "ROMANCE", "2015"));
+		modelMovie.addMovie(new Movie("049", "Singing in the Rain", "Gene Kelly", "ROMANCE", "1952"));
+		modelMovie.addMovie(new Movie("050", "Her", "Spike Jonze", "ROMANCE", "2013"));
 
-    	//Documentario
-    	modelMovie.addMovie(new Movie("Hot Girls Wanted", "Ronna Gradus", "Documentario", "2015"));
-    	modelMovie.addMovie(new Movie("Blackfish", "Gabriela Cowperthwaite", "Documentario", "2013"));
-    	modelMovie.addMovie(new Movie("Icaro", "Bryan Fogel", "Documentario", "2017"));
-    	modelMovie.addMovie(new Movie("Man on Wire", "James Marsh", "Documentario", "2008"));
-    	modelMovie.addMovie(new Movie("Jiro Dreams of Sushi", "David Gelb", "Documentario", "2011"));
+		//Fantasia                  
+		modelMovie.addMovie(new Movie("051", "The Neverending Story", "Wolfgang Petersen", "FANTASIA", "1984"));
+		modelMovie.addMovie(new Movie("052", "Time Bandits", "Terry Gilliam", "FANTASIA", "1981"));
+		modelMovie.addMovie(new Movie("053", "Lost Horizon", "James Hilton", "FANTASIA", "1937"));
+		modelMovie.addMovie(new Movie("054", "Pan�s Labyrinth", "Guillermo del Toro", "FANTASIA", "2006"));
+		modelMovie.addMovie(new Movie("055", "Orlando", "Sally Potter", "FANTASIA", "1992"));
 
-    	//Thrash											
-    	modelMovie.addMovie(new Movie("Machete", "Robert Rodriguez", "Trash", "2010"));
-    	modelMovie.addMovie(new Movie("Plan 9 of Sidereal Space", "Ed Wood", "Trash", "1959"));
-    	modelMovie.addMovie(new Movie("Drag me to Hell", "Sam Raimi", "Trash", "2009"));
-    	modelMovie.addMovie(new Movie("Evil Dead 2", "Sam Raimi", "Trash", "1987"));
-    	modelMovie.addMovie(new Movie("Sharknado", "David Michael Latt", "Trash", "2013"));
-
-    	//Romance
-    	modelMovie.addMovie(new Movie("It Happened One Night", "James Wan", "Romance", "1934"));
-    	modelMovie.addMovie(new Movie("Casablanca", "Frank Capra", "Romance", "1942"));
-    	modelMovie.addMovie(new Movie("Carol", "Todd Haynes", "Romance", "2015"));
-    	modelMovie.addMovie(new Movie("Singing in the Rain", "Gene Kelly", "Romance", "1952"));
-    	modelMovie.addMovie(new Movie("Her", "Spike Jonze", "Romance", "2013"));
-
-
-    	//Fantasia					
-    	modelMovie.addMovie(new Movie("The Neverending Story", "Wolfgang Petersen", "Fantasia", "1984"));
-    	modelMovie.addMovie(new Movie("Time Bandits", "Terry Gilliam", "Fantasia", "1981"));
-    	modelMovie.addMovie(new Movie("Lost Horizon", "James Hilton", "Fantasia", "1937"));
-    	modelMovie.addMovie(new Movie("Pan�s Labyrinth", "Guillermo del Toro", "Fantasia", "2006"));
-    	modelMovie.addMovie(new Movie("Orlando", "Sally Potter", "Fantasia", "1992"));
-
-
-    	//Drama				
-    	modelMovie.addMovie(new Movie("12 Years a Slave", "Steve McQueen", "Drama", "2013"));
-    	modelMovie.addMovie(new Movie("Citizen Kane", "Orson Welles", "Drama", "1941"));
-    	modelMovie.addMovie(new Movie("All About Eve", "Joseph L. Mankiewicz", "Drama", "1950"));
-    	modelMovie.addMovie(new Movie("Metropolis", "Fritz Lang", "Drama", "1927"));
-    	modelMovie.addMovie(new Movie("Moonlight", "Barry Jenkins", "Drama", "2016"));
+		//Drama             
+		modelMovie.addMovie(new Movie("056", "12 Years a Slave", "Steve McQueen", "DRAMA", "2013"));
+		modelMovie.addMovie(new Movie("057", "Citizen Kane", "Orson Welles", "DRAMA", "1941"));
+		modelMovie.addMovie(new Movie("058", "All About Eve", "Joseph L. Mankiewicz", "DRAMA", "1950"));
+		modelMovie.addMovie(new Movie("059", "Metropolis", "Fritz Lang", "DRAMA", "1927"));
+		modelMovie.addMovie(new Movie("060", "Moonlight", "Barry Jenkins", "DRAMA", "2016"));
     }
 }
