@@ -16,43 +16,39 @@
 	</head>
 	<body>
 		<header class="menu">
-			<a href="index.html"><button class="button-leave"> Sair</button></a>
+			<a href="index.html"><button class="button-leave">SAIR</button></a>
         </header>
 		<div class="container">
             <div class="header"> 
-                <img src="img/logo1.png" height=125px>
+                <img src="img/logo1.png" class="img-fluid" height=125px>
             </div>
-            <h1>MOVIE2U</h1>
-            <div class="row col-md-6">
-                <div class="box">
-                     <select id="genre" class="mb-15 input-large form-control select-films">
-		                <option value="unselected" selected disabled hidden>Escolha um gênero</option>
-		                <option value="acao">ACAO</option>
-		                <option value="animacao">ANIMACAO</option>
-		                <option value="aventura">AVENTURA</option>
-						<option value="comedia">COMEDIA</option>
-		                <option value="cult">CULT</option>
-		                <option value="documentario">DOCUMENTARIO</option>
-		                <option value="drama">DRAMA</option>
-						<option value="fantasia">FANTASIA</option>
-		                <option value="ficcao">FICCAO</option>
-		                <option value="romance">ROMANCE</option>
-		                <option value="suspense">SUSPENSE</option>
-		                <option value="trash">TRASH</option>
-		            </select>
-			        <button id="busca" class="btn btn-secondary search-button col-md-12">BUSCAR</button>
-                </div>
+            <h1>MOVIE2U</h1>          
+            <div class="box">
+                 <select id="genre" class="mb-15 input-large form-control select-films">
+	                <option value="unselected" selected disabled hidden>Escolha um gênero</option>
+	                <option value="acao">ACAO</option>
+	                <option value="animacao">ANIMACAO</option>
+	                <option value="aventura">AVENTURA</option>
+					<option value="comedia">COMEDIA</option>
+	                <option value="cult">CULT</option>
+	                <option value="documentario">DOCUMENTARIO</option>
+	                <option value="drama">DRAMA</option>
+					<option value="fantasia">FANTASIA</option>
+	                <option value="ficcao">FICCAO</option>
+	                <option value="romance">ROMANCE</option>
+	                <option value="suspense">SUSPENSE</option>
+	                <option value="trash">TRASH</option>
+	            </select>
+		        <button id="busca" class="btn btn-secondary search-button col-md-12">BUSCAR</button>
             </div>
-            <div class="row col-md-6">
-			    <div id="movies">
-			    	<div id="dadosFilme1" class="box-movie">	
-			    	</div>
-			    	<div id="dadosFilme2" class="box-movie">
-			    	</div>
-			    	<div id="dadosFilme3" class="box-movie">
-			    	</div>
-			    </div>
-	        </div>
+		    <div id="movies" class="row text-center mt-15 movies-selector">
+		    	<div id="dadosFilme1" class="box-movie">	
+		    	</div>
+		    	<div id="dadosFilme2" class="box-movie">
+		    	</div>
+		    	<div id="dadosFilme3" class="box-movie">
+		    	</div>
+		    </div>
 		</div>
 		<script>
 			$(document).ready(function(){

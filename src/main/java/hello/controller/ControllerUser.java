@@ -34,7 +34,7 @@ public class ControllerUser {
 	        	String password = String.valueOf(params.get("password"));
 	        	System.out.println(username + "\n" + email + "\n" + password);
 	        	
-	        	if (username.isEmpty() && email.isEmpty() && password.isEmpty()) {
+	        	if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
 	        		return "Por favor, entre com valores válidos";
 	        	} else if (!modelUser.addUser(new User(username, email, password))) {
 	        		return "E-mail já cadastrado";
@@ -57,7 +57,7 @@ public class ControllerUser {
 	        	String password = String.valueOf(params.get("password"));
 	        	System.out.println(email + "\n" + password);
 	        	
-	        	if (email.isEmpty() && password.isEmpty()) {
+	        	if (email.isEmpty() || password.isEmpty()) {
 	        		return "Por favor, entre com valores válidos";
 	        	}  else if(modelUser.isUserAvailable(email)) {
 	        		return "E-mail não encontrado";
@@ -80,18 +80,5 @@ public class ControllerUser {
         }
         return map;
     }
-	
-	/*public static void postUser() {
-		post("/movie/insertElement", (req, res) -> {
-			 Map<String, String> map = JsonUtil.parse(req.body());
-             return "Hello " + map.get("username") + "!";
-		});
-	}
-	
-    public static class JsonUtil {
-        public final static Map<String, String> parse(String object) {
-            return new Gson().fromJson(object, Map.class);
-        }
-    }*/
 }
 	

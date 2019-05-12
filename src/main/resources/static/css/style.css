@@ -11,8 +11,8 @@ body {
 
 .style-form {
   background: #FFF;
-	margin:auto;
-	margin-top:11.5em;
+  margin:auto;
+  margin-top:11.5em;
   max-width: 400px;
   padding: 45px;
   text-align: center;
@@ -71,11 +71,11 @@ body {
 }
 
 .box {
-  background: #FFF;
+  background: none;
   margin:auto;
   margin-top:11.5em;
   max-width: 400px;
-  padding: 45px;
+  padding: auto;
   text-align: center;
 }
 
@@ -89,6 +89,13 @@ p {
   font-size: 15px;
 }
 
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 /* Movies */
 
 a {
@@ -98,9 +105,7 @@ a {
 
 .menu {
   padding: 10px 10px;
-  text-align: center;
-  position: fixed;
-  right: 0;
+  text-align: right;
   margin-top: 10px;
 }
 
@@ -120,11 +125,10 @@ a {
   color: black;
   cursor: pointer;
   width: 100px;
-  height: 50px;
+  height: 30px;
   border: none;
   border-radius: 1em;
-  padding: 15px;
-  font-size: 15px;
+  font-size: 12px;
   outline: none;
   text-transform: uppercase;
 }

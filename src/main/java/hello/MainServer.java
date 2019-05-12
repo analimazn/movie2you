@@ -26,7 +26,7 @@ public class MainServer {
 
         //Servir conteudo html, css e javascript
 		staticFileLocation("/static");
-		inicializarFilmes();
+		initializeMovies();
 
 		ControllerMovie controllerMovie = new ControllerMovie(modelMovie);
 		ControllerUser controllerUser = new ControllerUser(modelUser);
@@ -38,7 +38,7 @@ public class MainServer {
 		controllerUser.postLogin();	
     }
     
-    public static void inicializarFilmes(){
+    public static void initializeMovies(){
     	//Comedia
     	modelMovie.addMovie(new Movie("001", "Easy A", "Will Gluck", "COMEDIA", "2010"));
 		modelMovie.addMovie(new Movie("002", "Mr. Right", "Paco Cabezas", "COMEDIA", "2015"));
