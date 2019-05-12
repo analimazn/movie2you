@@ -114,7 +114,7 @@ public class MainServer {
 		modelMovie.addMovie(new Movie("051", "The Neverending Story", "Wolfgang Petersen", "FANTASIA", "1984"));
 		modelMovie.addMovie(new Movie("052", "Time Bandits", "Terry Gilliam", "FANTASIA", "1981"));
 		modelMovie.addMovie(new Movie("053", "Lost Horizon", "James Hilton", "FANTASIA", "1937"));
-		modelMovie.addMovie(new Movie("054", "Pan�s Labyrinth", "Guillermo del Toro", "FANTASIA", "2006"));
+		modelMovie.addMovie(new Movie("054", "Pan's Labyrinth", "Guillermo del Toro", "FANTASIA", "2006"));
 		modelMovie.addMovie(new Movie("055", "Orlando", "Sally Potter", "FANTASIA", "1992"));
 
 		//Drama             

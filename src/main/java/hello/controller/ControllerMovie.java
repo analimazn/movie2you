@@ -31,6 +31,7 @@ public class ControllerMovie {
 	public void getMovie(){
 		get("/movie/:genre", (req, res) -> {
 			moviesSorted.clear();
+			System.out.println(req.params(":genre"));
 			List<Movie> moviesFound = modelMovie.searchGenre(req.params(":genre"));		
 			Collections.shuffle(moviesFound);
 			for (int i = 0; i <= 2; i++) {

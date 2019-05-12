@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.darken-bg{
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.79);
+}
+
+.style-form {
+  background: #FFF;
+	margin:auto;
+	margin-top:11.5em;
+  max-width: 400px;
+  padding: 45px;
+  text-align: center;
+  border-style: solid;
+  border-color: #dae6e8;
+  border-radius: 2em;
+}
+  
+.style-form input {
+  background: white;
+  width: 100%;
+  border: none;
+  margin: 0 0 15px 0;
+  font-size: 15px;
+}
+
+.style-form .btn-submit {
+  cursor: pointer;
+  width: 100%;
+  border-radius:1em;
+  padding: 15px;
+  font-size: 15px;
+  outline: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+}
+
+.style-form .btn-submit:hover, 
+.style-form .btn-submit:active, 
+.style-form .btn-submit:focus {
+  background: #c7cdcd;
+}
+
+.style-form .message {
+  margin: 15px 0 0 0;
+  color: #b3b3b3;
+  font-size: 15px;
+}
+
+.style-form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.style-form .register-form {
+  display: none;
+}
+
+.container {
+  background-color: #FFF;
+  padding: 10px 10px;
+  margin: auto;
+  border-radius: 2em;
+  text-align: center;
+}
+
+.box {
+  background: #FFF;
+  margin:auto;
+  margin-top:11.5em;
+  max-width: 400px;
+  padding: 45px;
+  text-align: center;
+}
+
+.login {
+  border-style: solid;
+  border-color: #dae6e8;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 15px;
+}
+
+/* Movies */
+
+a {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.menu {
+  padding: 10px 10px;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  margin-top: 10px;
+}
+
+.box-movie {
+  background: #FFF;
+  margin:auto;
+  margin-top:11.5em;
+  max-width: 400px;
+  padding: 45px;
+  text-align: center;
+  border-style: solid;
+  border-color: #dae6e8;
+  border-radius: 2em;
+}
+
+.button-leave {
+  color: black;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 1em;
+  padding: 15px;
+  font-size: 15px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.button-leave: hover, 
+.button-leave: active, 
+.button-leave: focus {
+  background: #c7cdcd;
+}
+.search-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button{
+  float: inherit !important;
+  width: 100%;
+  text-align: center;
+  border-radius:1em;
+}
+
+.movies-selector{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.relatedfilms{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  width: unset !important;
+  height: unset !important;
+}
+
+.row {
+  margin-bottom: 5px;
+}
+
+.select-films{
+  text-align: center; /* para firefox */
+  text-align-last: center; /* para chrome */
+}
+
+.box .btn-secondary:hover, 
+.box .btn-secondary:active, 
+.box .btn-secondary:focus {
+  background: #c7cdcd ;
+}

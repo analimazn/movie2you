@@ -66,6 +66,7 @@ public class ModelMovie {
 	    	if(movie.getGenre().equals(genre)) 
 	    		result.add(movie);	    	
 	    }	
+	    System.out.println(result);
 	    return result;
 	}
 	

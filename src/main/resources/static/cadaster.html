@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset='utf-8'/>
+        
+        <title> Cadastro - movie2you </title>
+        
+        <link rel="icon" type="img/camera.png" href="img/camera.png" />
+        <link href="css/style.css" rel=stylesheet>
+        <link href="css/bootstrap.min.css" rel=stylesheet>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title> Cadastro - movie2you </title>
-    
-    <link rel="icon" type="img/camera.png" href="img/camera.png" />
-    <link href="css/style-cadaster.css" rel=stylesheet>
-    <link href="css/bootstrap.min.css" rel=stylesheet>
-    <script src="js/jquery.js"></script>
+        <script src="js/jquery.js"></script>
+    </head>
 
-    <meta charset='utf-8'/>
-</head>
-
-<body>
-	
-    <div>
-        <a href="index.html"><center><button class="botao"> Home</button></center></a>
-    </div>
-
-    <div class="container" id="content" class="fundo" style="background-image:url('img/cinema.png');background-attachment:fixed;background-repeat:no-repeat;background-size:cover;background-position:center center;">
-        <section id="browser-view">
-            <div class="col-md-12">
-                <main id="main-content">
-                    <form action = "#" "id="register-form" name="register-form" class="register-form">
-                            <input type="text" id="username" placeholder="Username" required>
-                            <br>
-                            <input type="text" id="email" placeholder="Email" required>
-                            <br>
-                            <input type="password" id="password" placeholder="Senha" required>
-                            <br>
-                            <input type="submit" class="btn-submit" id="userSubmit" value="Cadastrar">
-                            <span id="result"></span>
-                            <br>
-                           <p>Já tem uma conta? <a href="login.html"> Acesse aqui</a></p>
-                        </div>
-                    </form>
-                </main>
+    <body>
+        <div class="container">
+            <header class="header"> 
+                <img src="img/logo2.png" height=125px>
+            </header>
+            <h1>MOVIE2U</h1>
+            <div class="row col-md-6">
+                <div class="box">
+                    <h3>Receba indicações de filmes de acordo com o gênero escolhido!</h3>
+                </div>
             </div>
-        </section>
-    </div>
-    <script>
-        $(document).ready(function(){
-          $('#userSubmit').click(function(){
-            var username = $('#username').val();
-            var email = $('#email').val();
-            var password = $('#password').val();
+            <div class="row col-md-6">
+                <form action = "#" id="style-form" name="style-form" class="style-form">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <br>
+                        <input type="text" id="email" placeholder="Email" required>
+                        <br>
+                        <input type="password" id="password" placeholder="Senha" required>
+                        <br>
+                        <input type="submit" class="btn-submit" id="userSubmit" value="Cadastrar">
+                        <p id="result"></p>
+                        <br>
+                       <p>Já tem uma conta? <a href="index.html"> Acesse aqui</a></p>
+                </form>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+              $('#userSubmit').click(function(){
+                var username = $('#username').val();
+                var email = $('#email').val();
+                var password = $('#password').val();
 
-            var data = {
-                "username": username, 
-                "email": email, 
-                "password": password
-            };
+                var data = {
+                    "username": username, 
+                    "email": email, 
+                    "password": password
+                };
 
-            $.ajax({
-                method: 'POST',
-                data: data,
-                contentType: 'application/json; charset=utf-8',
-                url: '/movie/insertElement',
-                success: function(data) {
-                    $('#result').text(data);
-                }
+                $.ajax({
+                    method: 'POST',
+                    data: data,
+                    contentType: 'application/json; charset=utf-8',
+                    url: '/movie/insertElement',
+                    success: function(data) {
+                        $('#result').text(data);
+                    }
+                });
+              });
             });
-          });
-        });
-            
-    </script>
-</body>
-
+                
+        </script>
+    </body>
 </html>
