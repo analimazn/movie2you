@@ -1,15 +1,12 @@
-# movie2you
-
-## Ana Lima
-## Bruno Dionísio
-## Mayara Ferreira
+# MOVIE2U
 
 # UML
-![uml](https://user-images.githubusercontent.com/25674507/49265171-34718180-f438-11e8-8bec-e4a21b320826.jpg)
+![uml](https://user-images.githubusercontent.com/25674507/57584381-f9787d00-74b0-11e9-85fb-39615cf7787f.png)
 
 # Screens
-![index](https://user-images.githubusercontent.com/25674507/49265166-33d8eb00-f438-11e8-9fae-3d6897dbdb6e.png)
-![login](https://user-images.githubusercontent.com/25674507/49265167-33d8eb00-f438-11e8-9674-adab311d2238.png)
-![cadastrar](https://user-images.githubusercontent.com/25674507/49265165-33d8eb00-f438-11e8-9199-0b58c38ad071.png)
-![pesquisar](https://user-images.githubusercontent.com/25674507/49265169-33d8eb00-f438-11e8-87fe-a1d5bb18d169.png)
-![resultado](https://user-images.githubusercontent.com/25674507/49265170-33d8eb00-f438-11e8-985c-6bb721eccc32.png)
+
+![login](https://user-images.githubusercontent.com/25674507/57584418-7e639680-74b1-11e9-8eaf-ebd7242423aa.png)
+![cadaster](https://user-images.githubusercontent.com/25674507/57584420-80c5f080-74b1-11e9-90ec-add6222e80f6.png)
+![page-movie](https://user-images.githubusercontent.com/25674507/57584421-83c0e100-74b1-11e9-9085-f1fdeef88f1a.png)
+![options](https://user-images.githubusercontent.com/25674507/57584423-86bbd180-74b1-11e9-833b-9bf716c34db6.png)
+![result](https://user-images.githubusercontent.com/25674507/57584424-88859500-74b1-11e9-8208-1eebf790ed08.png)
